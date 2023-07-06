@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datelly</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css?ver=<?=time()?>" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!--<link rel="manifest" href="/manifest">-->
+    <link href="css/plugins/ladda/ladda-themeless.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/apple-touch-icon.png">
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="css/parl.css?ver=<?=time()?>" rel="stylesheet">
+    <link href="css/plugins/chosen/bootstrap-chosen.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#1d1d1d">
+    <meta name="msapplication-TileColor" content="#1d1d1d">
+    <meta name="theme-color" content="#2d2d2d">
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/plugins/morris/morris-0.4.3.min.css" rel="stylesheet">
+    <link href="css/plugins/fullcalendar/fullcalendar.css" rel="stylesheet">
+    <link href="css/plugins/fullcalendar/fullcalendar.print.css" rel='stylesheet' media='print'>
+    <link href="css/plugins/fullcalendar/fullcalendar-scheduler.min.css" rel="stylesheet">
+    <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="css/tenant.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl/owl.theme.default.min.css" />
+    <script src="js/font-awesome4.js" crossorigin="anonymous"></script>
+</head>
+<div id="landscape-alert" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:rgba(0,0,0,0.9); z-index:9999999999999999;">
+    <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); text-align:center;">
+        <h1 style="color:white;">This app can only be viewed in portrait mode.</h1>
+    </div>
+</div>
+<body>
+<div id="sosWrapper"></div>
+<div id="wrapper">
+    <div id="navIcon" class="impres" style="text-align: right;width: 80%;">
+        <a class="navbar-minimalize btn buttonMaxim" href="#">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+    </div>
+    <nav class="navbar-default navbar-static-side navbar-static-side-after impres" role="navigation" style="position: fixed;padding-right: 5px;border-right: 1px solid #2d2d2d;background-position: right;height: 100%;background-color: #1d1d1d;">
+        <div style="text-align: right;width: 80%;">
+            <a class="navbar-minimalize btn buttonMinim" href="#" style="display:none;border-bottom-left-radius: 0px;">
+                <i class="fa fa-times" style="color: white!important;" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu"></ul>
+        </div>
+    </nav>
+    <div id="titleContainer"><h1 id="removeTitle" style="margin: 0px;"></div>
+    <div id="page-wrapper" class="gray-bg" style="display: flex;margin: 0px;overflow: auto;padding: 0px;">
+        <div id="deskLangCont"></div>
+        <div class="wrapper row" id="appCointainerC" style="margin: auto;">
+            <div class="col-lg-6 appScreens" id="bookAppointment">
+                <div class="staticContainer">
+                    <div class="mainUsageScreen">
+                        <div id="serviceTypeSelectionScreen"></div>
+                    </div>
+                    <div class="mainUsageScreen">
+                        <div class="categoryAndServicesSelectionScreen controls w-100ma impres"></div>
+                        <div id="categoryAndServicesSelectionScreen"></div>
+                    </div>
+                    <div class="mainUsageScreen">
+                        <div class="barberSelectionScreen controls w-100ma impres"></div>
+                        <div id="barberSelectionScreen"></div>
+                    </div>
+                    <div class="mainUsageScreen">
+                        <div class="locationTrackScreen controls w-100ma impres"></div>
+                        <div id="locationTrackScreen"></div>
+                    </div>
+                    <div class="mainUsageScreen">
+                        <div class="hourSelectionScreen controls w-100ma impres"></div>
+                        <div id="hourSelectionScreen"></div>
+                    </div>
+                    <div class="mainUsageScreen">
+                        <div class="bookScreen controls w-100ma impres"></div>
+                        <div id="bookScreen"></div>
+                    </div>
+                    <div class="mainUsageScreen">
+                        <div id="finishScreen"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 appScreens" id="qrcode"></div>
+            <div class="col-lg-6 appScreens row" id="user" style="margin: 0px;display: flex;padding: 0px;padding-top: 20px;"></div>
+            <div class="col-lg-6 appScreens" id="infos" style="padding-left: 0px;"></div>
+            <div class="branding"></div>
+        </div>
+    </div>
+    <div id="bottomMenu"></div>
+    <div id="installModal">
+        <div id="installModalContent"></div>
+    </div>
+</div>
+<script src="js/dateTime.js"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/plugins/toastr/toastr.min.js"></script>
+<script src="js/plugins/chosen/chosen.jquery.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+<script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="js/plugins/fullcalendar/moment.min.js"></script>
+<script src="js/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="js/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="js/plugins/fullcalendar/fullcalendar-scheduler.min.js"></script>
+<script src="js/plugins/fullcalendar/moment.min.js"></script>
+<script src="js/owl/owl.carousel.min.js"></script>
+<script src="js/qrcode/qrcode.min.js"></script>
+<script src="js/stepper.min.js?ver=1"></script>
+</body>
+</html>

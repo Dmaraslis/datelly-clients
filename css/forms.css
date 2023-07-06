@@ -1,0 +1,139 @@
+@import url(https://fonts.googleapis.com/css?family=Abel);
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: normal;
+  margin: 0;
+  outline: 0 none;
+  padding: 0;
+}
+html, body { height: 100%; font-family: "BPkinder"; }
+body {
+  background: #d4d4d4;
+  padding: 30px;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+nav {
+  background: #eeeeee;
+  overflow: hidden;
+}
+nav li {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+nav li:after {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  transform: rotate(45deg);
+  background: #343434;
+}
+nav a {
+  display: block;
+  padding: 14px 20px;
+  position: relative;
+  z-index: 1;
+}
+nav li a:before {
+  content: " ";
+  position: absolute;
+  right: 3px;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  transform: rotate(45deg);
+  background: #eeeeee;
+  z-index: -1;
+}
+
+.container {
+  margin-top: -45.5px;
+  height: 40px;
+  text-align: center;
+  float: right;
+  margin-right: 10px;
+}
+
+button {
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 140px;
+  background: #eeeeee;
+  border: 2px solid #02ade9;
+  color: #02ade9;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+button:hover {
+  color: white;
+  background: #02ade9;
+}
+button:active {
+  letter-spacing: 2px;
+}
+
+.onclic {
+  width: 40px;
+  border-color: #bbbbbb;
+  border-width: 3px;
+  font-size: 0;
+  border-left-color: #02ade9;
+  -webkit-animation: rotating 2s 0.25s linear infinite;
+  animation: rotating 2s 0.25s linear infinite;
+}
+.onclic:after {
+  content: "";
+}
+.onclic:hover {
+  color: #02ade9;
+  background: white;
+}
+
+.validate {
+  font-size: 13px;
+  color: white;
+  background: #02ade9;
+}
+.validate:after {
+  font-family: 'FontAwesome';
+  content: "\f00c";
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+

@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Abel);
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: normal;
+  margin: 0;
+  outline: 0 none;
+  padding: 0;
+}
+html, body { height: 100%; font-family: "BPkinder"; }
+.nav2 body {
+  background: #d4d4d4;
+  padding: 30px;
+}
+.nav2 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.nav2 {
+  background: #eeeeee;
+  overflow: hidden;
+}
+.nav2 li {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+.nav2 li:after {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  transform: rotate(45deg);
+  background: #343434;
+}
+.nav2 a {
+  display: block;
+  padding: 14px 20px;
+  position: relative;
+  z-index: 1;
+}
+.nav2 li a:before {
+  content: " ";
+  position: absolute;
+  right: 3px;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  transform: rotate(45deg);
+  background: #eeeeee;
+  z-index: -1;
+}
+
+
